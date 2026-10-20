@@ -7,8 +7,8 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { navigation, skillGroups, socialLinks } from '@/data/portfolio'
 
-const profileImage = import.meta.env.VITE_PROFILE_IMAGE as string | undefined
-const resumeUrl = import.meta.env.VITE_RESUME_URL as string | undefined
+const profileImage = import.meta.env.VITE_PROFILE_IMAGE || "/private/profile.png"
+const resumeUrl = import.meta.env.VITE_RESUME_URL || "/private/resume.pdf"
 
 function SocialLinks({ dock = false }: { dock?: boolean }) {
  return <div className={dock ? 'fixed bottom-[max(18px,env(safe-area-inset-bottom))] left-1/2 z-50 flex -translate-x-1/2 items-center rounded-full border border-gray-200 bg-white/95 p-1.5 shadow-[0_4px_24px_rgba(17,24,39,.09)] backdrop-blur-xl' : 'flex flex-wrap gap-4 lg:gap-6'} role={dock ? 'navigation' : undefined} aria-label={dock ? 'Social links' : undefined}>
