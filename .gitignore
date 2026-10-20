@@ -6,3 +6,5 @@ dist/
 .vercel/
 *.log
 *.tsbuildinfo
+# Local-only personal files
+/public/private/
