@@ -1,5 +1,7 @@
 # My Portfolio
 
+**[View Live Portfolio](https://my-portfolio-three-brown-13.vercel.app/)**
+
 <p><img src="https://skillicons.dev/icons?i=react,ts,tailwind,vite&theme=light" alt="React, TypeScript, Tailwind CSS and Vite" /></p>
 <p>
 <img src="https://img.shields.io/badge/Lucide_React-111827?style=for-the-badge&logo=lucide&logoColor=white" alt="Lucide React" />
