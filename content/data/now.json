@@ -1,0 +1,11 @@
+{
+  "updated": "2026-11",
+  "lede": "Building web applications end to end.",
+  "items": [
+    {
+      "label": "Building",
+      "what": "SprintLens and FlashSale: React interfaces, Django APIs, and reliable backend systems."
+    }
+  ],
+  "foot": ""
+}

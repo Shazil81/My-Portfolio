@@ -1,0 +1,118 @@
+{
+  "openTo": "",
+  "headline": {
+    "lead": "Full-stack developer building",
+    "emphasis": "reliable backends and thoughtful interfaces",
+    "tail": "from first idea to working application."
+  },
+  "seeWork": "See the work",
+  "toDesk": "Get to know me",
+  "toDeskBadge": "about & toolkit",
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "work": "Work",
+    "contact": "Contact",
+    "desk": "The desk",
+    "sectionsLabel": "Sections",
+    "topLabel": "Top of page",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "backToTop": "Back to top"
+  },
+  "resume": {
+    "short": "Résumé",
+    "long": " PDF ↓"
+  },
+  "theme": {
+    "toDark": "Switch to dark",
+    "toLight": "Switch to light"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "Hi there!",
+    "portraitPending": "Portrait goes here",
+    "portraitAlt": "Mohammad Shazil Moin"
+  },
+  "portraitEgg": {
+    "taps": 10,
+    "question": "What's 2 + 2?",
+    "inputLabel": "Your answer",
+    "submit": "Answer",
+    "wrong": "Nope. Try again.",
+    "dismiss": "Never mind",
+    "answers": [
+      "aloo",
+      "aalu"
+    ],
+    "caption": "sher bacha",
+    "hiddenAlt": "Aahil Khan, off duty",
+    "flipBack": "Flip back"
+  },
+  "skills": {
+    "eyebrow": "Toolbox",
+    "title": "What I build with"
+  },
+  "experience": {
+    "eyebrow": "Experience",
+    "title": "Where I've been",
+    "indexLabel": "Roles",
+    "expand": "Show details",
+    "collapse": "Hide details"
+  },
+  "work": {
+    "eyebrow": "Selected work",
+    "title": "Two things worth opening",
+    "lede": "A team-delivery workspace and an ecommerce platform. Built end to end.",
+    "readMore": "Read the write-up",
+    "shotPending": "No screenshot yet"
+  },
+  "credentials": {
+    "eyebrow": "Education",
+    "title": "Learning, then building",
+    "education": "Education",
+    "awards": "Awards",
+    "writing": "Writing"
+  },
+  "closer": {
+    "eyebrow": "Contact",
+    "title": "Let's build\nsomething.",
+    "body": "Have an opportunity, a project, or an interesting problem? Let’s talk about building something together.",
+    "plainVersion": "Plain text version"
+  },
+  "door": {
+    "title": "A closer look at how I build.",
+    "body": "Explore SprintLens and FlashSale: the workflows, backend systems, and interfaces behind the projects.",
+    "scores": "From role-based permissions to payment verification and caching.",
+    "hidden": "Source code and live applications are linked in each project.",
+    "action": "Explore the projects",
+    "note": "React · Django · PostgreSQL · Redis"
+  },
+  "footer": {
+    "note": "Thanks for scrolling all the way down :)",
+    "inspiredLead": "Inspired by",
+    "inspiredShell": "yevtam.com",
+    "inspiredShellUrl": "https://yevtam.com",
+    "inspiredShellFor": "(dock, cursor)",
+    "inspiredJoin": "and",
+    "inspiredSurface": "ajvadlaseen.com",
+    "inspiredSurfaceUrl": "https://ajvadlaseen.com",
+    "inspiredSurfaceFor": "(type, borders, shadows)",
+    "inspiredRest": ""
+  },
+  "desk": {
+    "exit": "The site",
+    "tabSuffix": "the canvas"
+  },
+  "workPage": {
+    "allWork": "All work",
+    "home": "Home",
+    "indexTitle": "Work",
+    "indexLede": "Every project, as its own page — linkable, indexable, and readable without JavaScript.",
+    "whatItDoes": "What it does",
+    "builtWith": "Built with",
+    "shots": "Screenshots",
+    "backToWork": "Back to all work"
+  }
+}

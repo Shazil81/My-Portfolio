@@ -2,42 +2,37 @@
 
 **[View Live Portfolio](https://my-portfolio-three-brown-13.vercel.app/)**
 
-<p><img src="https://skillicons.dev/icons?i=react,ts,tailwind,vite&theme=light" alt="React, TypeScript, Tailwind CSS and Vite" /></p>
-<p>
-<img src="https://img.shields.io/badge/Lucide_React-111827?style=for-the-badge&logo=lucide&logoColor=white" alt="Lucide React" />
-<img src="https://img.shields.io/badge/React_Icons-E91E63?style=for-the-badge&logo=react&logoColor=white" alt="React Icons" />
-<img src="https://img.shields.io/badge/shadcn%2Fui-000000?style=for-the-badge&logo=shadcnui&logoColor=white" alt="shadcn/ui" />
-</p>
+<p><img src="https://skillicons.dev/icons?i=nextjs,react,ts,tailwind&theme=light" alt="Next.js, React, TypeScript and Tailwind CSS" /></p>
 
-A responsive portfolio application built with React, TypeScript, Tailwind CSS, shadcn/ui, Lucide React, and React Icons. Vite provides the development server and production build.
+A responsive full-stack developer portfolio with animated section reveals, smooth scrolling, a dark/light theme, technology logos, education, experience, and project case studies.
 
 ## Technology Stack
 
-| Technology | Role |
+| Technology | Purpose |
 | --- | --- |
-| React | Component rendering and navigation state |
-| TypeScript | Typed components, data models, and form handlers |
-| Tailwind CSS | Responsive layouts and utility-based styling |
-| shadcn/ui | Button, Card, Badge, Input, and Textarea components |
-| Lucide React | Navigation, email, shopping, and action icons |
-| React Icons | Technology and social profile logos |
-| Vite | Development server and optimized production bundles |
+| Next.js 16 | App Router, static rendering, metadata and project detail routes |
+| React 19 | Components and interactive screenshot galleries |
+| TypeScript | Typed content and components |
+| CSS and Tailwind CSS 4 | Responsive layouts, design tokens, typography and themes |
+| GSAP, ScrollTrigger and @gsap/react | Entrance effects, scroll reveals, and interactive motion |
+| Lenis | Smooth in-page scrolling |
+| SVG and WebP assets | Technology logos and optimized project screenshots |
 
-shadcn/ui components are maintained as source files under `src/components/ui/`. Shared class utilities use `clsx` and `tailwind-merge`; component variants use `class-variance-authority`.
+This is a Next.js project. It replaces the earlier Vite implementation. The frontend is presentation-focused and does not require a separate API server or database.
 
 ## Features
 
-- Minimal white interface with responsive desktop and mobile layouts.
-- Fixed navigation with a collapsible mobile menu.
-- Categorized technology skills and an education timeline.
-- Featured project card with demo and source-code links.
-- Compact fixed social dock with keyboard focus styles and desktop hover labels.
-- Labeled form controls, required-field validation, and a skip link.
-- Reduced-motion support.
+- Animated introduction, grid background, and accessible navigation.
+- Saved light/dark theme and reduced-motion handling.
+- About, skills, experience, education, and contact sections.
+- SprintLens first, followed by FlashSale.
+- Separate project pages with bold feature highlights, simple technology tags, and live/source links.
+- Screenshot galleries: three SprintLens images and two FlashSale images, cropped to the application UI.
+- Resume download and professional profile links.
 
-## Getting Started
+## Local Setup
 
-Install Node.js 20.19+ or 22.12+ (or a compatible newer release) and npm.
+Use Node.js 20.9 or later and npm.
 
 ```bash
 git clone https://github.com/Shazil81/My-Portfolio.git
@@ -46,85 +41,49 @@ npm ci
 npm run dev
 ```
 
-Open the local URL printed by Vite. Stop the server with `Ctrl+C`.
+Open the URL printed by Next.js. Use `Ctrl+C` to stop the server.
 
 ## Commands
 
-| Command | Description |
+| Command | Purpose |
 | --- | --- |
-| `npm ci` | Install exact dependencies from the committed lockfile |
-| `npm run dev` | Start the Vite development server |
-| `npm run build` | Check TypeScript and create the production build |
-| `npm run preview` | Serve the production build locally |
+| `npm run dev` | Start development mode |
+| `npm run typecheck` | Run TypeScript validation |
+| `npm run build` | Create the production build |
+| `npm start` | Serve the production build |
 
-## Project Structure
+## Source Structure
 
 ```text
-My-Portfolio/
-├── index.html
-├── package.json
-├── package-lock.json
-├── components.json
-├── tsconfig.json
-├── vite.config.ts
-├── .gitignore
-├── README.md
-└── src/
-    ├── main.tsx
-    ├── App.tsx
-    ├── index.css
-    ├── data/
-    │   └── portfolio.ts
-    ├── lib/
-    │   └── utils.ts
-    └── components/
-        └── ui/
-            ├── badge.tsx
-            ├── button.tsx
-            ├── card.tsx
-            ├── input.tsx
-            └── textarea.tsx
+app/                  Main page, layout, themes, and /work project routes
+components/site/      Page sections, navigation, motion, and screenshot gallery
+components/desktop/   Shared cursor and interactive primitives
+content/data/         Portfolio text, projects, skills, and experience
+content/              Typed content exports and validation
+lib/                  Theme, motion, formatting, and content utilities
+public/               Static files served by Next.js
+next.config.ts        Next.js configuration
+vercel.json           Next.js build settings for Vercel
 ```
 
-`dist/` is generated by the production build and excluded from Git. Dependencies and local environment files are also ignored.
+Some shared components and utilities are retained from the upstream codebase; only the portfolio and project routes are exposed by this application.
 
-## Architecture
+## Content
 
-`src/App.tsx` composes the navigation, introduction, skills, timeline, project card, contact form, and social dock. The mobile menu uses React state. Typed skills, navigation items, and social URLs live in `src/data/portfolio.ts`.
+Update the JSON files under `content/data/` to change the displayed content. Project technologies must match the toolbox entries in `stack.json`. Project highlights support `**bold text**`. Images are listed in order; the first is the project preview and the complete list appears in the project gallery.
 
-The `@/` import alias resolves to `src/` in TypeScript and Vite. `components.json` configures shadcn/ui and its source aliases. Tailwind CSS is connected through the official Vite plugin.
+The contact section uses an email link and does not submit messages to a backend. No email API credentials are required.
 
-## Contact Form
+## Deploy to Vercel
 
-The form constructs a `mailto:` URL from the validated fields. Sending is completed in the visitor's configured email application. The app does not store messages or call a server-side email service. No environment variables are required.
-
-## Production Build and Deployment
+The committed `vercel.json` selects Next.js, installs with `npm ci`, and builds with `npm run build`. The output is `.next`, not the old Vite `dist` folder. No environment variables are required for the included portfolio content.
 
 ```bash
 npm ci
+npm run typecheck
 npm run build
-npm run preview
 ```
 
-| Hosting setting | Value |
-| --- | --- |
-| Install command | `npm ci` |
-| Build command | `npm run build` |
-| Output directory | `dist` |
-| Framework | Vite / React |
+## License
 
-Deploy the generated contents of `dist/`. The app uses hash anchors within a single page and requires no server-side routes. Configure repository-based deployment separately in your hosting provider.
-
-## Validation
-
-The production command checks TypeScript before creating the Vite bundle. After edits, inspect desktop and mobile layouts, test the navigation menu and section anchors, check social links, and confirm that the dock stays fixed while scrolling. Contact submission requires a configured email handler.
-
-## Documentation
-
-- [React](https://react.dev/)
-- [TypeScript](https://www.typescriptlang.org/docs/)
-- [Tailwind CSS](https://tailwindcss.com/docs/)
-- [shadcn/ui with Vite](https://ui.shadcn.com/docs/installation/vite)
-- [Lucide React](https://lucide.dev/guide/packages/lucide-react)
-- [React Icons](https://react-icons.github.io/react-icons/)
-- [Vite](https://vite.dev/guide/)
+The reference implementation is adapted from [aahil-khan/portfolio-canvas](https://github.com/aahil-khan/portfolio-canvas). Its MIT copyright and license notice are retained in `LICENSE`. Personal content and screenshots have been customized for this portfolio. Third-party logos belong to their respective owners.

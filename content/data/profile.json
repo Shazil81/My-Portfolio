@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "name": "Mohammad Shazil Moin",
+    "initials": "SM",
+    "resumePdf": "/shazil-resume.pdf",
+    "portrait": "/pfp/shazil.png",
+    "portraitHidden": "",
+    "role": {
+      "prefix": "Full Stack Developer,",
+      "emphasis": "React & Django"
+    },
+    "location": "Patna, India",
+    "availability": "",
+    "email": "mohammadshazilmoin@gmail.com",
+    "intro": "Full-stack developer focused on backend architecture, reliable APIs, asynchronous processing, and responsive interfaces. I build end-to-end web applications with React, Django, PostgreSQL, and Redis.",
+    "notes": [
+      "Pursuing M.Tech in Information Technology (Courseware Engineering) at Jadavpur University, 2026–2028.",
+      "B.Tech in Computer Science & Engineering (Data Science), Brainware University, 2021–2025.",
+      "I enjoy connecting thoughtful interfaces with robust backend systems, from authentication and payments to background processing."
+    ],
+    "deskWelcome": "Welcome to my workspace. Explore my projects and toolkit.",
+    "links": [
+      {
+        "label": "GitHub",
+        "href": "https://github.com/Shazil81"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/shazil81"
+      },
+      {
+        "label": "LeetCode",
+        "href": "https://leetcode.com/u/890Shazil/"
+      },
+      {
+        "label": "GeeksforGeeks",
+        "href": "https://www.geeksforgeeks.org/profile/msmoin"
+      },
+      {
+        "label": "Email",
+        "href": "mailto:mohammadshazilmoin@gmail.com"
+      }
+    ]
+  },
+  "headlineStats": []
+}

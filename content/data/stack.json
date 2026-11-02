@@ -1,0 +1,115 @@
+[
+  {
+    "label": "Frontend",
+    "tools": [
+      {
+        "name": "HTML5",
+        "logo": "/logos/html5-original.svg"
+      },
+      {
+        "name": "CSS3",
+        "logo": "/logos/css3-original.svg"
+      },
+      {
+        "name": "JavaScript",
+        "logo": "/logos/javascript-original.svg"
+      },
+      {
+        "name": "TypeScript",
+        "logo": "/logos/Typescript.svg"
+      },
+      {
+        "name": "React",
+        "logo": "/logos/react-original.svg"
+      },
+      {
+        "name": "Redux",
+        "logo": "/logos/redux.svg"
+      },
+      {
+        "name": "Bootstrap",
+        "logo": "/logos/bootstrap-original.svg"
+      }
+    ]
+  },
+  {
+    "label": "Backend",
+    "tools": [
+      {
+        "name": "Python",
+        "logo": "/logos/python-original.svg"
+      },
+      {
+        "name": "Django",
+        "logo": "/logos/django.svg"
+      },
+      {
+        "name": "Django REST Framework",
+        "logo": "/logos/rest.png"
+      },
+      {
+        "name": "Celery",
+        "logo": "/logos/celery.svg"
+      }
+    ]
+  },
+  {
+    "label": "Databases & Cache",
+    "tools": [
+      {
+        "name": "PostgreSQL",
+        "logo": "/logos/postgresql-original.svg"
+      },
+      {
+        "name": "MySQL",
+        "logo": "/logos/mysql-original.svg"
+      },
+      {
+        "name": "Redis",
+        "logo": "/logos/redis-original.svg"
+      }
+    ]
+  },
+  {
+    "label": "Tools & DevOps",
+    "tools": [
+      {
+        "name": "Git",
+        "logo": "/logos/git-original.svg"
+      },
+      {
+        "name": "GitHub",
+        "logo": "/logos/github-original.svg"
+      },
+      {
+        "name": "Docker",
+        "logo": "/logos/docker-original.svg"
+      },
+      {
+        "name": "Kubernetes",
+        "logo": "/logos/kubernetes.svg"
+      },
+      {
+        "name": "Vite",
+        "logo": "/logos/vite.svg"
+      }
+    ]
+  },
+  {
+    "label": "Integrations",
+    "tools": [
+      {
+        "name": "Razorpay",
+        "logo": "/logos/razorpay.svg"
+      },
+      {
+        "name": "Gemini API",
+        "logo": "/logos/gemini.svg"
+      },
+      {
+        "name": "JWT",
+        "logo": "/logos/jwt.svg"
+      }
+    ]
+  }
+]

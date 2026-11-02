@@ -1,0 +1,75 @@
+[
+  {
+    "slug": "sprintlens",
+    "name": "SprintLens",
+    "tagline": "Developer activity, delivery, and growth in one workspace.",
+    "year": 2026,
+    "kind": "System",
+    "lede": "A **team-delivery workspace** for **tasks, sprints, blockers**, and **two-way reviews**.",
+    "highlights": [
+      "**Role-based access** for administrators, managers, and developers.",
+      "**Celery and Redis** support background jobs; the current deployment schedules reminders through **GitHub Actions**.",
+      "**Delivery analytics**, **audit trails**, and consent-based **Gemini insights**.",
+      "**GitHub activity integration** and authenticated **PDF, CSV, and JSON reports**."
+    ],
+    "stack": [
+      "React",
+      "TypeScript",
+      "Django REST Framework",
+      "PostgreSQL",
+      "Redis",
+      "Celery",
+      "Gemini API"
+    ],
+    "links": [
+      {
+        "label": "Live Demo",
+        "href": "https://sprintlens-kohl.vercel.app/"
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com/Shazil81/SprintLens"
+      }
+    ],
+    "images": [
+      "/work/sprintlens-1-cropped.webp",
+      "/work/sprintlens-2-cropped.webp",
+      "/work/sprintlens-3-cropped.webp"
+    ]
+  },
+  {
+    "slug": "flashsale",
+    "name": "FlashSale",
+    "tagline": "Shopping, payments, and delivery — connected.",
+    "year": 2025,
+    "kind": "Product",
+    "lede": "A **full-stack ecommerce application** with **customer, administrator, and delivery-partner workflows**.",
+    "highlights": [
+      "**JWT authentication** and separate customer, administrator, and delivery portals.",
+      "**Razorpay test checkout** with **server-side payment verification**.",
+      "**PostgreSQL transaction locking** and **atomic fulfillment**.",
+      "**Redis catalog caching** and cache invalidation after fulfillment."
+    ],
+    "stack": [
+      "React",
+      "Django REST Framework",
+      "PostgreSQL",
+      "Redis",
+      "Razorpay"
+    ],
+    "links": [
+      {
+        "label": "Live Demo",
+        "href": "https://flash-sale-ecommerce.vercel.app/"
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com/Shazil81/flash-sale-ecommerce"
+      }
+    ],
+    "images": [
+      "/work/flashsale-1-cropped.webp",
+      "/work/flashsale-2-cropped.webp"
+    ]
+  }
+]

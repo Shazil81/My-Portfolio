@@ -1,0 +1,33 @@
+{
+  "jobs": [
+    {
+      "slug": "webguru",
+      "role": "Python Developer Intern",
+      "company": "WEBGURU",
+      "period": "Nov 2024 – Jan 2025",
+      "year": 2024,
+      "meta": "Onsite · Python development",
+      "lede": "Applied Python and object-oriented programming to data-processing workflows.",
+      "highlights": [
+        "Worked with Python libraries and object-oriented programming.",
+        "Built professional experience in coding, teamwork, and meeting project deadlines."
+      ],
+      "stack": [
+        "Python"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Jadavpur University",
+      "degree": "M.Tech · Information Technology (Courseware Engineering)",
+      "detail": "2026 – 2028 · Pursuing"
+    },
+    {
+      "institution": "Brainware University",
+      "degree": "B.Tech · Computer Science & Engineering (Data Science)",
+      "detail": "2021 – 2025"
+    }
+  ],
+  "awards": []
+}
