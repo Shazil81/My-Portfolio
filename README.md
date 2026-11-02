@@ -83,7 +83,3 @@ npm ci
 npm run typecheck
 npm run build
 ```
-
-## License
-
-The reference implementation is adapted from [aahil-khan/portfolio-canvas](https://github.com/aahil-khan/portfolio-canvas). Its MIT copyright and license notice are retained in `LICENSE`. Personal content and screenshots have been customized for this portfolio. Third-party logos belong to their respective owners.

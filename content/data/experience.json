@@ -6,14 +6,14 @@
       "company": "WEBGURU",
       "period": "Nov 2024 – Jan 2025",
       "year": 2024,
-      "meta": "Onsite · Python development",
-      "lede": "Applied Python and object-oriented programming to data-processing workflows.",
+      "meta": "Onsite · Django web development",
+      "lede": "Developed a foundation in **Django web development** through hands-on learning during the internship.",
       "highlights": [
-        "Worked with Python libraries and object-oriented programming.",
-        "Built professional experience in coding, teamwork, and meeting project deadlines."
+        "Learned **Django fundamentals** and how its components fit together in a web application.",
+        "Strengthened practical development skills through **guided learning, coding exercises, and team collaboration**."
       ],
       "stack": [
-        "Python"
+        "Django"
       ]
     }
   ],
