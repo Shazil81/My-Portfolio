@@ -2,17 +2,18 @@
   "jobs": [
     {
       "slug": "webguru",
-      "role": "Python Developer Intern",
-      "company": "WEBGURU",
-      "period": "Nov 2024 – Jan 2025",
+      "role": "Intern — Python, Django Development with Data Science",
+      "company": "Webguru Infosystems Pvt. Ltd.",
+      "period": "15 Nov 2024 – 22 Jan 2025",
       "year": 2024,
-      "meta": "Onsite · Django web development",
-      "lede": "Developed a foundation in **Django web development** through hands-on learning during the internship.",
+      "meta": "Certified internship · Python, Django Development with Data Science",
+      "lede": "Completed a certified internship programme in **Python, Django Development with Data Science** at **Webguru Infosystems Pvt. Ltd.**",
       "highlights": [
-        "Learned **Django fundamentals** and how its components fit together in a web application.",
-        "Strengthened practical development skills through **guided learning, coding exercises, and team collaboration**."
+        "Completed training in **Python, Django development, and Data Science** from **15 November 2024 to 22 January 2025**.",
+        "Recognized in the completion certificate as **sincere, hardworking, and result-oriented**."
       ],
       "stack": [
+        "Python",
         "Django"
       ]
     }
