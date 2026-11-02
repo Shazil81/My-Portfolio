@@ -27,13 +27,12 @@ shadcn/ui components are maintained as source files under `src/components/ui/`. 
 
 ## Features
 
-- Warm editorial interface with a spiral-notebook role heading, monochrome portrait, and responsive layouts.
-- Navigation with a collapsible mobile menu and an India local-time display.
+- Minimal white interface with responsive desktop and mobile layouts.
+- Fixed navigation with a collapsible mobile menu.
 - Categorized technology skills and an education timeline.
 - Featured project card with demo and source-code links.
 - Compact fixed social dock with keyboard focus styles and desktop hover labels.
 - Labeled form controls, required-field validation, and a skip link.
-- Pull-cord light/dark theme switch with saved preference.
 - Reduced-motion support.
 
 ## Getting Started
