@@ -11,37 +11,19 @@ import type { AppDef } from './types'
  * every hand-picked height in the prototype turned out to be wrong (one by 243px).
  */
 export const apps: readonly AppDef[] = [
+  { id: 'now', label: 'Now', icon: 'now', colour: '#C9E4C5', tint: '#E9F5E7', width: 520, rotate: -.6 },
+  { id: 'coding', label: 'LeetCode', icon: 'graph', colour: '#A9D6FF', tint: '#E3F1FF', width: 500, rotate: .5 },
   { id: 'about', label: 'About', icon: 'about', colour: '#FACC00', tint: '#FEF3BF', width: 520, rotate: -1.0 },
   { id: 'work', label: 'Work', icon: 'work', colour: '#A8E6A1', tint: '#E4F7E1', width: 600, rotate: 0.7 },
   { id: 'experience', label: 'Experience', icon: 'experience', colour: '#FFB4A2', tint: '#FFE6DF', width: 560, rotate: -1.2 },
   { id: 'stack', label: 'Stack', icon: 'stack', colour: '#A9D6FF', tint: '#E3F1FF', width: 650, rotate: 0.3 },
-  { id: 'writing', label: 'Writing', icon: 'writing', colour: '#D9C2FF', tint: '#F0E8FF', width: 520, rotate: -0.8 },
-  { id: 'archive', label: 'Archive', icon: 'archive', colour: '#FFD9A8', tint: '#FFF0DC', width: 560, rotate: 0.8 },
   { id: 'resume', label: 'Résumé', icon: 'resume', colour: '#FFE0A3', tint: '#FFF3DC', width: 470, rotate: 0.9 },
   { id: 'themes', label: 'Themes', icon: 'themes', colour: '#FFC2E2', tint: '#FFE7F3', width: 600, rotate: -0.4 },
   { id: 'contact', label: 'Contact', icon: 'contact', colour: '#B8F2E6', tint: '#E6FBF7', width: 480, rotate: 0.6 },
-  { id: 'contributions', label: 'Contributions', icon: 'graph', colour: '#8FD694', tint: '#E4F4E5', width: 660, rotate: 0.5 },
-  { id: 'now', label: 'Now', icon: 'now', colour: '#C9E4C5', tint: '#E9F5E7', width: 520, rotate: -0.9 },
   { id: 'tutorial', label: 'How it works', icon: 'tutorial', colour: '#F7D9B0', tint: '#FCEFDE', width: 540, rotate: 0.6 },
-  { id: 'visitors', label: 'Visitors', icon: 'visitors', colour: '#BCC7F5', tint: '#E7EBFC', width: 560, rotate: -0.5 },
-  { id: 'notes', label: 'Notes', icon: 'notes', colour: '#E6D3B3', tint: '#F5EBDB', width: 520, rotate: -0.6 },
-  { id: 'arcade', label: 'Arcade', icon: 'arcade', colour: '#DCE8A0', tint: '#F1F6DC', width: 460, rotate: 0.4 },
 ]
 
-/**
- * How the dock is laid out.
- *
- * `apps` above stays the full registry — every card that exists, with its colour and geometry.
- * This is only about what the dock *shows*, because fifteen loose tiles plus two externals had
- * turned it into a colour bar you had to read rather than scan.
- *
- * The five that stay loose are the ones a stranger came for. Everything else lives in a folder
- * that previews its contents, so the dock is nine tiles and nothing became unreachable — the
- * command palette and Go to still list every card by name either way.
- *
- * To regroup, move ids between these lists. `validate.ts` checks that every id resolves and that
- * every dock app appears exactly once, so a card can never be orphaned by a typo here.
- */
+/** Only personal portfolio cards are exposed in the dock and menus. */
 export type DockNode =
   | { kind: 'app'; id: string }
   | {
@@ -59,20 +41,9 @@ export const dockLayout: readonly DockNode[] = [
   { kind: 'app', id: 'work' },
   { kind: 'app', id: 'experience' },
   { kind: 'app', id: 'stack' },
+  { kind: 'app', id: 'resume' },
   { kind: 'app', id: 'contact' },
-  /*
-   * Each folder is one idea with one icon, not a leftovers drawer — a folder whose contents you
-   * cannot guess from the tile is just a tile you have to open to understand. Colours echo the
-   * dominant card inside, so the folder hints at its contents twice.
-   */
-  { kind: 'folder', id: 'words', label: 'Words', icon: 'words', colour: '#D9C2FF', items: ['writing', 'archive', 'resume'] },
-  { kind: 'folder', id: 'live', label: 'Live', icon: 'live', colour: '#BCC7F5', items: ['contributions', 'visitors', 'now', 'notes'] },
-  /*
-   * Arcade, Themes and How it works stay loose. There is no "Play" folder any more: with Notes
-   * moved into Live, it would have held one card, and a folder of one is a click in the way of
-   * the thing it contains.
-   */
-  { kind: 'app', id: 'arcade' },
+  { kind: 'folder', id: 'live', label: 'Live', icon: 'live', colour: '#BCC7F5', items: ['now', 'coding'] },
   { kind: 'app', id: 'themes' },
   { kind: 'app', id: 'tutorial' },
 ]
@@ -81,11 +52,11 @@ export const dockLayout: readonly DockNode[] = [
 export const externalApps: readonly AppDef[] = [
   {
     id: 'github', label: 'GitHub', icon: 'github', colour: '#E8E6DE', tint: '#F4F2EA',
-    width: 0, rotate: 0, href: 'https://github.com/aahil-khan',
+    width: 0, rotate: 0, href: 'https://github.com/Shazil81',
   },
   {
     id: 'linkedin', label: 'LinkedIn', icon: 'linkedin', colour: '#E8E6DE', tint: '#F4F2EA',
-    width: 0, rotate: 0, href: 'https://www.linkedin.com/in/aahil-khan77/',
+    width: 0, rotate: 0, href: 'https://www.linkedin.com/in/shazil81',
   },
 ]
 

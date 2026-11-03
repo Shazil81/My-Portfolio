@@ -117,7 +117,7 @@ export function Hero() {
             </span>
           </a>
           {/* an in-page jump, not a route: the closer explains what the desk is before you go */}
-          <a className="ghost" href="#about">
+          <a className="ghost" href="/canvas">
             <span className="ghost__dot" aria-hidden />
             {site.toDesk}
             <span className="ghost__badge">{site.toDeskBadge}</span>
@@ -366,7 +366,7 @@ export function Closer() {
             <p>{site.door.hidden}</p>
           </div>
           <div className="door__go">
-            <Link href="#work">
+            <Link href="/canvas">
               {site.door.action} <span aria-hidden>→</span>
             </Link>
             <p className="door__note">{site.door.note}</p>

@@ -99,5 +99,5 @@ export const tutorial = {
 
   /** Shown last. There are eggs, and saying so is more fun than leaving them undiscovered. */
   footLabel: 'Also',
-  foot: 'There are nine things hidden on the page, try the Konami Code (¬‿¬)',
+  foot: 'Explore my projects, experience, skills, and contact links from the dock.',
 } as const

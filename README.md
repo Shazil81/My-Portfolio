@@ -29,6 +29,8 @@ This is a Next.js project. It replaces the earlier Vite implementation. The fron
 - Separate project pages with bold feature highlights, simple technology tags, and live/source links.
 - Screenshot galleries: three SprintLens images and two FlashSale images, cropped to the application UI.
 - Resume download and professional profile links.
+- Interactive `/canvas` workspace with draggable cards, themes, and a personalized Live folder.
+- In-canvas LeetCode overview: total solved, Easy/Medium/Hard breakdown, and global ranking for Shazil81. Public statistics refresh hourly; unavailable data shows a retry state.
 
 ## Local Setup
 
@@ -66,7 +68,7 @@ next.config.ts        Next.js configuration
 vercel.json           Next.js build settings for Vercel
 ```
 
-Some shared components and utilities are retained from the upstream codebase; only the portfolio and project routes are exposed by this application.
+Some shared components and utilities are retained from the upstream codebase; the portfolio, project routes, and personalized canvas are exposed by this application.
 
 ## Content
 
@@ -83,3 +85,7 @@ npm ci
 npm run typecheck
 npm run build
 ```
+
+## LeetCode Overview
+
+The `/api/leetcode` route reads public LeetCode data on the server. It uses the LeetCode profile URL in `content/data/profile.json`; no API key or environment variable is required. Responses are cached for one hour. The overview stays inside the canvas and does not redirect visitors.

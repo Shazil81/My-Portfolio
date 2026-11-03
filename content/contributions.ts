@@ -6,7 +6,7 @@
  */
 
 export const contributions = {
-  login: 'aahil-khan',
+  login: 'Shazil81',
   /** `{total}` is replaced with the real number. */
   lede: '{total} contributions in the last year.',
   /** Shown when there is no token configured, or GitHub is unreachable. */

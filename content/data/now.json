@@ -1,10 +1,14 @@
 {
   "updated": "2026-11",
-  "lede": "Building web applications end to end.",
+  "lede": "Learning and building with React and Django.",
   "items": [
     {
-      "label": "Building",
-      "what": "SprintLens and FlashSale: React interfaces, Django APIs, and reliable backend systems."
+      "label": "Education",
+      "what": "Pursuing M.Tech in Information Technology (Courseware Engineering) at Jadavpur University."
+    },
+    {
+      "label": "Projects",
+      "what": "SprintLens and FlashSale: full-stack applications built with React and Django."
     }
   ],
   "foot": ""

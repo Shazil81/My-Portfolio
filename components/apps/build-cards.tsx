@@ -2,35 +2,17 @@ import { Fragment, type ReactNode } from 'react'
 
 import type { CardDef } from '@/components/desktop/card'
 import { DetailRow } from '@/components/apps/interactive'
-import { ArchiveFeed } from '@/components/apps/archive-feed'
 import { Shots } from '@/components/apps/shots'
-import { ArchiveFull } from '@/components/apps/archive-full'
-import { ArcadeLauncher } from '@/components/apps/arcade'
-import { ContributionGraph } from '@/components/apps/contributions'
-import { FoundIt } from '@/components/apps/found'
-import { Terminal } from '@/components/apps/terminal'
-import { deepSpace } from '@/content/eggs'
-import { Game2048 } from '@/components/apps/games/g2048'
-import { Minesweeper } from '@/components/apps/games/minesweeper'
-import { Snake } from '@/components/apps/games/snake'
-import { TypingTest } from '@/components/apps/games/typing'
-import { NotesWall } from '@/components/apps/notes'
 import { ThemePicker } from '@/components/apps/theme-picker'
-import { Visitors } from '@/components/apps/visitors'
-import { contributions } from '@/content/contributions'
-import { now } from '@/content/now'
 import { tutorial } from '@/content/tutorial'
-import { fetchContributions } from '@/lib/github'
-import { storeIsLive } from '@/lib/store'
+import { now } from '@/content/now'
+import { LeetCodeOverview } from '@/components/apps/leetcode-overview'
 import {
-  ARCHIVE_KINDS,
   apps,
-  archive,
   detailPalette,
   education,
   headlineStats,
   jobs,
-  posts,
   profile,
   projects,
   toolGroups,
@@ -126,31 +108,6 @@ function Tutorial() {
  * on a bare month: that parses as UTC midnight and then prints in the server's local zone,
  * which renders "July" for an August date anywhere west of Greenwich.
  */
-function Now() {
-  const [y, m] = now.updated.split('-').map(Number)
-  const stamp = new Date(Date.UTC(y, m - 1, 1)).toLocaleDateString('en-GB', {
-    month: 'long',
-    year: 'numeric',
-    timeZone: 'UTC',
-  })
-
-  return (
-    <>
-      <p className="lede">{now.lede}</p>
-      <div className="now">
-        {now.items.map((i) => (
-          <Fragment key={i.label}>
-            <b className="now__label">{i.label}</b>
-            <span>{i.what}</span>
-          </Fragment>
-        ))}
-      </div>
-      <p className="now__stamp">Last updated {stamp}</p>
-      {now.foot ? <p className="now__foot">{now.foot}</p> : null}
-    </>
-  )
-}
-
 function StackChips({ names }: { names: readonly string[] }) {
   return (
     <div>
@@ -268,24 +225,6 @@ export async function buildCards(): Promise<CardDef[]> {
   push('stack', <StackShelf />)
 
   push(
-    'writing',
-    <>
-      {[...posts]
-        .sort((a, b) => b.year - a.year)
-        .map((p) => (
-          <a className="item" key={p.slug} href={p.href} target="_blank" rel="noopener noreferrer">
-            <span className="yr">{p.year}</span>
-            <span>
-              <span className="ttl">{p.title}</span>
-              <span className="sub">{p.blurb}</span>
-            </span>
-            <span className="tag">{p.readingTime}</span>
-          </a>
-        ))}
-    </>,
-  )
-
-  push(
     'resume',
     <>
       <p className="lede">The whole thing, as a page you can scroll.</p>
@@ -314,8 +253,6 @@ export async function buildCards(): Promise<CardDef[]> {
     </>,
   )
 
-  push('archive', <ArchiveFeed />)
-
   push('themes', <ThemePicker />)
 
   push(
@@ -337,95 +274,17 @@ export async function buildCards(): Promise<CardDef[]> {
     </>,
   )
 
-  push('contributions', <ContributionGraph data={await fetchContributions(contributions.login)} />)
-
-  /*
-   * `storeIsLive` is read here rather than inside the card because the card is a client
-   * component and lib/store.ts is server-only. Passing it down also means the measurement rig
-   * renders whichever of the two shapes — real card or empty state — will actually be shown,
-   * so the height it measures is the height the card ends up having.
-   */
-  push('now', <Now />)
-
   push('tutorial', <Tutorial />)
 
-  push('visitors', <Visitors configured={storeIsLive} />)
+  push('now', <>
+    <p className="lede">{now.lede}</p>
+    <div className="now">{now.items.map(item => <Fragment key={item.label}>
+      <b className="now__label">{item.label}</b><span>{item.what}</span>
+    </Fragment>)}</div>
+    <p className="now__stamp">Updated November 2026</p>
+  </>)
 
-  push('notes', <NotesWall />)
-
-  push('arcade', <ArcadeLauncher />)
-
-  /*
-   * The games are spawned cards, opened from the Arcade launcher, exactly like a project detail.
-   * Colours are reused from cards already in the dock rather than invented: the contrast gate
-   * only audits live dock tiles, so a new pastel here would escape it entirely.
-   */
-  const GAMES: { id: string; label: string; colour: string; tint: string; width: number; rotate: number; body: ReactNode }[] = [
-    { id: 'typing', label: 'Typing Test', colour: '#DCE8A0', tint: '#F1F6DC', width: 560, rotate: 0.6, body: <TypingTest /> },
-    { id: 'mines', label: 'Minesweeper', colour: '#DCE8A0', tint: '#F1F6DC', width: 420, rotate: -0.7, body: <Minesweeper /> },
-    { id: 'snake', label: 'Snake', colour: '#A9D6FF', tint: '#E3F1FF', width: 420, rotate: 0.8, body: <Snake /> },
-    { id: '2048', label: '2048', colour: '#D9C2FF', tint: '#F0E8FF', width: 420, rotate: -0.5, body: <Game2048 /> },
-  ]
-  for (const g of GAMES) {
-    cards.push({
-      id: `game:${g.id}`,
-      label: g.label,
-      icon: 'arcade',
-      colour: g.colour,
-      tint: g.tint,
-      width: g.width,
-      rotate: g.rotate,
-      body: g.body,
-    })
-  }
-
-  /*
-   * The two easter-egg cards. Both are spawned-only, so neither shows a dock tile.
-   *
-   * The terminal is unlocked by the konami code. The deep-space card is `pinned` and given a
-   * fixed home far outside the normal camera bounds — pinned so it can't be dragged and is
-   * skipped by fit-all and every arrangement, because framing "everything" would otherwise have
-   * to include it and shrink the real content to a speck.
-   */
-  cards.push({
-    id: 'terminal',
-    label: 'Terminal',
-    icon: 'arcade',
-    colour: '#BFE8C8',
-    tint: '#E6F6EA',
-    width: 560,
-    rotate: 0.4,
-    secret: true,
-    body: <Terminal />,
-  })
-  cards.push({
-    id: 'deep-space',
-    label: '?',
-    icon: 'external',
-    colour: '#FFC2E2',
-    tint: '#FFE7F3',
-    width: 420,
-    rotate: -0.6,
-    pinned: true,
-    at: deepSpace.at,
-    secret: true,
-    body: <FoundIt />,
-  })
-
-  /* --- an archive entry's image, opened on its own --- */
-  for (const a of archive) {
-    if (!a.image) continue
-    cards.push({
-      id: `archive:${a.id}`,
-      label: a.title,
-      icon: 'shot',
-      colour: ARCHIVE_KINDS[a.kind].colour,
-      tint: '#FFF0DC',
-      width: 520,
-      rotate: -0.7,
-      body: <ArchiveFull src={a.image} alt={a.title} />,
-    })
-  }
+  push('coding', <LeetCodeOverview />)
 
   /* --- project details, plus a screenshot card for each --- */
   for (const p of projects) {
@@ -442,7 +301,7 @@ export async function buildCards(): Promise<CardDef[]> {
         <>
           {p.meta ? <p className="detail-meta">{p.meta}</p> : null}
           {p.award ? <div className="award">🏆 {p.award}</div> : null}
-          <p className="lede">{p.lede}</p>
+          <p className="lede">{rich(p.lede)}</p>
           <Shots images={p.images} alt={`${p.name} screenshot`} />
           <ul className="bullets">
             {p.highlights.map((h, i) => (

@@ -6,8 +6,8 @@
     "tail": "from first idea to working application."
   },
   "seeWork": "See the work",
-  "toDesk": "Get to know me",
-  "toDeskBadge": "about & toolkit",
+  "toDesk": "There’s a far more fun version of this",
+  "toDeskBadge": "highly recommended",
   "nav": {
     "about": "About",
     "skills": "Skills",
@@ -47,7 +47,7 @@
       "aalu"
     ],
     "caption": "sher bacha",
-    "hiddenAlt": "Aahil Khan, off duty",
+    "hiddenAlt": "Mohammad Shazil Moin",
     "flipBack": "Flip back"
   },
   "skills": {
@@ -82,12 +82,12 @@
     "plainVersion": "Plain text version"
   },
   "door": {
-    "title": "A closer look at how I build.",
-    "body": "Explore SprintLens and FlashSale: the workflows, backend systems, and interfaces behind the projects.",
-    "scores": "From role-based permissions to payment verification and caching.",
-    "hidden": "Source code and live applications are linked in each project.",
-    "action": "Explore the projects",
-    "note": "React · Django · PostgreSQL · Redis"
+    "title": "Same portfolio. A different way to explore.",
+    "body": "Step into my interactive canvas: a desktop-style workspace with draggable windows, projects, and my developer toolkit.",
+    "scores": "Open a window. Move things around. Make the workspace yours.",
+    "hidden": "Prefer scrolling? You can always return to this page.",
+    "action": "Open the canvas",
+    "note": "Best explored on a desktop"
   },
   "footer": {
     "note": "Thanks for scrolling all the way down :)",

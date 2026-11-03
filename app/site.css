@@ -1719,3 +1719,15 @@ html:has(.site)::-webkit-scrollbar-thumb:hover {
 /* Adapt long personal name without changing the reference type system. */
 @media(min-width:821px){.site .name{font-size:clamp(5rem,12vw,10rem)}}
 .site .creds{grid-template-columns:1fr}.site .creds .cred ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem}@media(max-width:640px){.site .creds .cred ul{grid-template-columns:1fr}.site .name{font-size:clamp(3rem,12vw,6rem)}}
+
+/* Reference-style introduction pill, using theme tokens in both modes. */
+.site .ghost {
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 12px 18px; border: 2px dashed var(--ink-subtle);
+  border-radius: 999px; color: var(--ink-muted);
+  background: color-mix(in srgb, var(--accent) 9%, transparent);
+  text-decoration: none; transition: background 220ms ease, border-color 220ms ease;
+}
+.site .ghost:hover { background: color-mix(in srgb, var(--accent) 18%, transparent); border-color: var(--ink); }
+.site .ghost__badge { padding: 5px 12px; border: 1.5px solid var(--border); border-radius: 999px; background: var(--accent); color: var(--accent-ink); box-shadow: none; animation: none; white-space: nowrap; }
+@media (max-width: 520px) { .site .ghost { gap: 8px; padding: 10px 12px; font-size: .85rem; } .site .ghost__badge { font-size: .75rem; padding: 4px 8px; } }

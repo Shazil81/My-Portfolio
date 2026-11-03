@@ -31,7 +31,7 @@ export const terminal = {
     'sudo              no',
     'clear             wipe the scrollback',
   ],
-  whoami: 'aahil khan',
+  whoami: 'Mohammad Shazil Moin',
   sudo: 'nice try',
   cleared: '',
   themeUsage: 'usage: theme <name> · try `theme list`',
