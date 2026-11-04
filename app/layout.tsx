@@ -24,7 +24,7 @@ export const viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  icons: { icon: [{ url: "/favicon-sm.png?v=2", type: "image/png", sizes: "64x64" }], shortcut: "/favicon-sm.png?v=2", apple: "/favicon-sm.png?v=2" },
+  icons: { icon: [{ url: "/favicon-msm.png?v=1", type: "image/png", sizes: "64x64" }], shortcut: "/favicon-msm.png?v=1", apple: "/favicon-msm.png?v=1" },
   // Tab title is the name alone. The role belongs in the OG card below, where there is room for
   // it; in a tab strip it is truncated to noise long before the interesting half is reached.
   title: profile.name,

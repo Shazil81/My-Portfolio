@@ -69,7 +69,7 @@ const profile: Field = {
       label: 'You',
       fields: {
         name: { kind: 'str', label: 'Name' },
-        initials: { kind: 'str', label: 'Initials', max: 3, help: 'For the avatar. Two characters looks best.' },
+        initials: { kind: 'str', label: 'Initials', max: 3, help: 'For the avatar. Up to three characters for the avatar.' },
         role: {
           kind: 'obj',
           label: 'Role',
