@@ -11,7 +11,7 @@ import { DEFAULT_THEME, themes } from '@/content/themes'
  * first paint — so there is no flash of the wrong theme.
  */
 
-const KEY = 'canvas.restored-preview'
+const KEY = 'canvas.editorial-contrast-preview'
 const VALID = new Set(themes.map((t) => t.id))
 const listeners = new Set<() => void>()
 

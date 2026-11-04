@@ -41,9 +41,10 @@ export function DocBar({ back }: { back: { href: string; label: string } }) {
       <ThemeToggle />
 
       {profile.resumePdf ? (
-        <a className="bar__cta" href={profile.resumePdf} download>
+        <a className="bar__cta" href={profile.resumePdf} download aria-label="Download resume PDF">
           <span>{site.resume.short}</span>
           <span className="long">{site.resume.long}</span>
+            <svg className="resume-download" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4" /></svg>
         </a>
       ) : null}
       </header>

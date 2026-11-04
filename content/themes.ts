@@ -40,8 +40,8 @@ const t = (
 ): ThemeTokens => ({ canvas, surface, ink, inkMuted, inkSubtle, accent, accentInk, border, grid })
 
 export const themes: readonly Theme[] = [
-  { id: 'cream', label: 'Cream', dark: false, tokens:
-    t('#F7F5EE', '#FFFFFF', '#161616', 'rgba(22,22,22,.74)', 'rgba(22,22,22,.60)', '#FACC00', '#161616', '#161616', 'rgba(22,22,22,.055)') },
+  { id: 'cream', label: 'Stone & Burgundy', dark: false, tokens:
+    t('#F5F4F1', '#FFFFFF', '#25252A', '#505058', '#63636B', '#873E52', '#FFFFFF', '#34343B', 'rgba(37,37,42,.045)') },
 
   { id: 'latte', label: 'Catppuccin Latte', dark: false, tokens:
     t('#EFF1F5', '#FFFFFF', '#4C4F69', '#575A70', '#5F6379', '#DF8E1D', '#11111B', '#4C4F69', 'rgba(76,79,105,.08)') },
@@ -76,8 +76,8 @@ export const themes: readonly Theme[] = [
   { id: 'dracula', label: 'Dracula', dark: true, tokens:
     t('#282A36', '#21222C', '#F8F8F2', '#E2E2DC', '#BFC7E0', '#F1FA8C', '#282A36', '#F8F8F2', 'rgba(248,248,242,.07)') },
 
-  { id: 'tokyo-night', label: 'Tokyo Night', dark: true, tokens:
-    t('#1A1B26', '#16161E', '#C0CAF5', '#A9B1D6', '#949EC8', '#E0AF68', '#1A1B26', '#C0CAF5', 'rgba(192,202,245,.07)') },
+  { id: 'tokyo-night', label: 'Graphite & Rose', dark: true, tokens:
+    t('#1B1C22', '#24252D', '#F4F1F2', '#D0C9CE', '#B8AFB6', '#E4ABBF', '#261922', '#B8AFB6', 'rgba(244,241,242,.045)') },
 
   { id: 'everforest', label: 'Everforest', dark: true, tokens:
     t('#2D353B', '#343F44', '#D3C6AA', '#C0B296', '#A5AC9E', '#DBBC7F', '#2D353B', '#D3C6AA', 'rgba(211,198,170,.07)') },

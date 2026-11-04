@@ -172,10 +172,10 @@ export function SiteMotion({ children }: { children: ReactNode }) {
              * This started as two slow sines and read as completely static: a 57-second period
              * at 16px amplitude works out to ~1.6px/sec, which is real motion and invisible
              * motion. It accumulates distance every frame now, so the grid is *always* travelling
-             * at ~44px/sec — half a grid tile every second.
+             * at ~5px/sec across a 36px dot pattern.
              *
              * The heading rotates slowly (a full turn every ~70s) so it never settles into one
-             * direction, and the offset wraps at 88px — one grid tile — so the wrap is invisible.
+             * direction, and the offset wraps at 36px — one dot tile — so the wrap is invisible.
              * Frame-time is clamped so a backgrounded tab returning after a long pause does not
              * jump the grid across the screen in one frame.
              */
@@ -183,8 +183,8 @@ export function SiteMotion({ children }: { children: ReactNode }) {
             const dt = Math.min((now - last) / 1000, 0.05)
             last = now
             const heading = (now / 1000) * 0.09
-            driftX = (driftX + Math.cos(heading) * 44 * dt) % 88
-            driftY = (driftY + Math.sin(heading) * 44 * dt) % 88
+            driftX = (driftX + Math.cos(heading) * 5 * dt) % 36
+            driftY = (driftY + Math.sin(heading) * 5 * dt) % 36
 
             let px = 0
             let py = 0
@@ -195,8 +195,8 @@ export function SiteMotion({ children }: { children: ReactNode }) {
               /* -0.5 … 0.5 across the hero, so direction follows the pointer rather than a loop */
               const nx = smooth.x / Math.max(r.width, 1) - 0.5
               const ny = smooth.y / Math.max(r.height, 1) - 0.5
-              px = -nx * 46
-              py = -ny * 30
+              px = -nx * 16
+              py = -ny * 12
               gx = nx * 26
               gy = ny * 16
             }
@@ -274,7 +274,7 @@ export function SiteMotion({ children }: { children: ReactNode }) {
          * background that always slides the same way reads as a loop no matter how slow it is.
          */
         if (!hasFinePointer()) {
-          gsap.to('[data-hero-lines]', { x: 88, y: 88, duration: 9, ease: 'none', repeat: -1 })
+          gsap.to('[data-hero-lines]', { x: 36, y: 36, duration: 24, ease: 'none', repeat: -1 })
         }
 
         /* the bloom breathes regardless — it is not directional, so it never reads as a loop */

@@ -57,7 +57,7 @@
   --color-ink-subtle: var(--ink-subtle);
   --color-accent: var(--accent);
   --color-line: var(--border);
-  --font-sans: var(--font-space-grotesk), system-ui, sans-serif;
+  --font-sans: var(--font-lato), system-ui, sans-serif;
 }
 
 * {
@@ -73,7 +73,7 @@ body {
 }
 
 body {
-  font-family: var(--font-space-grotesk), system-ui, sans-serif;
+  font-family: var(--font-lato), system-ui, sans-serif;
   color: var(--ink);
   /*
    * Derived from the theme, never hardcoded. This gradient was literal hex and stayed cream

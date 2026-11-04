@@ -11,16 +11,16 @@ import type { AppDef } from './types'
  * every hand-picked height in the prototype turned out to be wrong (one by 243px).
  */
 export const apps: readonly AppDef[] = [
-  { id: 'now', label: 'Now', icon: 'now', colour: '#C9E4C5', tint: '#E9F5E7', width: 520, rotate: -.6 },
-  { id: 'coding', label: 'LeetCode', icon: 'graph', colour: '#A9D6FF', tint: '#E3F1FF', width: 500, rotate: .5 },
-  { id: 'about', label: 'About', icon: 'about', colour: '#FACC00', tint: '#FEF3BF', width: 520, rotate: -1.0 },
-  { id: 'work', label: 'Work', icon: 'work', colour: '#A8E6A1', tint: '#E4F7E1', width: 600, rotate: 0.7 },
-  { id: 'experience', label: 'Experience', icon: 'experience', colour: '#FFB4A2', tint: '#FFE6DF', width: 560, rotate: -1.2 },
-  { id: 'stack', label: 'Stack', icon: 'stack', colour: '#A9D6FF', tint: '#E3F1FF', width: 650, rotate: 0.3 },
-  { id: 'resume', label: 'Résumé', icon: 'resume', colour: '#FFE0A3', tint: '#FFF3DC', width: 470, rotate: 0.9 },
-  { id: 'themes', label: 'Themes', icon: 'themes', colour: '#FFC2E2', tint: '#FFE7F3', width: 600, rotate: -0.4 },
-  { id: 'contact', label: 'Contact', icon: 'contact', colour: '#B8F2E6', tint: '#E6FBF7', width: 480, rotate: 0.6 },
-  { id: 'tutorial', label: 'How it works', icon: 'tutorial', colour: '#F7D9B0', tint: '#FCEFDE', width: 540, rotate: 0.6 },
+  { id: 'now', label: 'Now', icon: 'now', colour: '#DFC2CB', tint: '#F4E9ED', width: 520, rotate: -.6 },
+  { id: 'coding', label: 'LeetCode', icon: 'graph', colour: '#DFC2CB', tint: '#F4E9ED', width: 500, rotate: .5 },
+  { id: 'about', label: 'About', icon: 'about', colour: '#DFC2CB', tint: '#F4E9ED', width: 520, rotate: -1.0 },
+  { id: 'work', label: 'Work', icon: 'work', colour: '#DFC2CB', tint: '#F4E9ED', width: 600, rotate: 0.7 },
+  { id: 'experience', label: 'Experience', icon: 'experience', colour: '#DFC2CB', tint: '#F4E9ED', width: 560, rotate: -1.2 },
+  { id: 'stack', label: 'Stack', icon: 'stack', colour: '#DFC2CB', tint: '#F4E9ED', width: 650, rotate: 0.3 },
+  { id: 'resume', label: 'Résumé', icon: 'resume', colour: '#DFC2CB', tint: '#F4E9ED', width: 470, rotate: 0.9 },
+  { id: 'themes', label: 'Themes', icon: 'themes', colour: '#DFC2CB', tint: '#F4E9ED', width: 600, rotate: -0.4 },
+  { id: 'contact', label: 'Contact', icon: 'contact', colour: '#DFC2CB', tint: '#F4E9ED', width: 480, rotate: 0.6 },
+  { id: 'tutorial', label: 'How it works', icon: 'tutorial', colour: '#DFC2CB', tint: '#F4E9ED', width: 540, rotate: 0.6 },
 ]
 
 /** Only personal portfolio cards are exposed in the dock and menus. */
@@ -43,7 +43,7 @@ export const dockLayout: readonly DockNode[] = [
   { kind: 'app', id: 'stack' },
   { kind: 'app', id: 'resume' },
   { kind: 'app', id: 'contact' },
-  { kind: 'folder', id: 'live', label: 'Live', icon: 'live', colour: '#BCC7F5', items: ['now', 'coding'] },
+  { kind: 'folder', id: 'live', label: 'Live', icon: 'live', colour: '#DFC2CB', items: ['now', 'coding'] },
   { kind: 'app', id: 'themes' },
   { kind: 'app', id: 'tutorial' },
 ]
@@ -51,19 +51,19 @@ export const dockLayout: readonly DockNode[] = [
 /** Rendered after a divider at the end of the dock. These leave the site. */
 export const externalApps: readonly AppDef[] = [
   {
-    id: 'github', label: 'GitHub', icon: 'github', colour: '#E8E6DE', tint: '#F4F2EA',
+    id: 'github', label: 'GitHub', icon: 'github', colour: '#DFC2CB', tint: '#F4E9ED',
     width: 0, rotate: 0, href: 'https://github.com/Shazil81',
   },
   {
-    id: 'linkedin', label: 'LinkedIn', icon: 'linkedin', colour: '#E8E6DE', tint: '#F4F2EA',
+    id: 'linkedin', label: 'LinkedIn', icon: 'linkedin', colour: '#DFC2CB', tint: '#F4E9ED',
     width: 0, rotate: 0, href: 'https://www.linkedin.com/in/shazil81',
   },
 ]
 
 /** Colours for cards that are spawned rather than docked (project/job details, screenshots). */
 export const detailPalette = {
-  project: { colour: '#A8E6A1', tint: '#E4F7E1' },
-  job: { colour: '#FFB4A2', tint: '#FFE6DF' },
+  project: { colour: '#DFC2CB', tint: '#F4E9ED' },
+  job: { colour: '#DFC2CB', tint: '#F4E9ED' },
 } as const
 
 /** Card ids are also used for spawned cards (`project:slug`, `shot:slug`), so this stays open. */

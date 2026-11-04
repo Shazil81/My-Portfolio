@@ -1731,3 +1731,30 @@ html:has(.site)::-webkit-scrollbar-thumb:hover {
 .site .ghost:hover { background: color-mix(in srgb, var(--accent) 18%, transparent); border-color: var(--ink); }
 .site .ghost__badge { padding: 5px 12px; border: 1.5px solid var(--border); border-radius: 999px; background: var(--accent); color: var(--accent-ink); box-shadow: none; animation: none; white-space: nowrap; }
 @media (max-width: 520px) { .site .ghost { gap: 8px; padding: 10px 12px; font-size: .85rem; } .site .ghost__badge { font-size: .75rem; padding: 4px 8px; } }
+
+/* User palette accents; reference layout and motion are retained. */
+.site .s-tool img{background:#F5F4F1}
+.site .section__head .eyebrow::before{background:var(--accent)}
+
+/* User-selected Google Fonts, loaded with Next.js font optimization. */
+.site :is(h1,h2,h3), .site .name { font-family:var(--font-poppins),sans-serif; }
+.site :is(.eyebrow,.case__no,.job__when,.s-chip), .site .bar nav { font-family:var(--font-roboto),sans-serif; }
+.site .mark { font-family:var(--font-geomini),sans-serif;font-weight:700; }
+/* Fit both name lines with the wider Poppins letterforms. */
+.site .name{font-size:clamp(2rem,9.5vw,8rem)}
+.site .name__line>span{white-space:nowrap}
+
+/* A quiet moving dot field replaces the square grid. */
+.site .hero__lines{background:radial-gradient(circle,color-mix(in srgb,var(--ink) 22%,transparent) 1.2px,transparent 1.4px) 0 0 / 36px 36px;opacity:.65}
+.site .hero__glow{background:radial-gradient(ellipse at 80% 25%,color-mix(in srgb,var(--accent) 10%,transparent),transparent 55%),radial-gradient(ellipse at 15% 65%,color-mix(in srgb,var(--ink) 4%,transparent),transparent 55%)}
+.site .hero__light{background:radial-gradient(circle 300px at var(--sx,50%) var(--sy,42%),color-mix(in srgb,var(--accent) 13%,transparent),transparent 75%)}
+
+
+/* Editorial neutral palette: controlled accent use and matched foregrounds. */
+.site .bar nav a,.site .ghost{color:var(--ink-muted)}
+.site .case__go{color:var(--ink)}
+.site .ghost__dot{background:var(--accent)}
+.site .closer__mail{text-decoration-color:var(--accent)}
+
+.site .bar__cta{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;white-space:nowrap;line-height:1;font-family:var(--font-lato),sans-serif;font-weight:700;letter-spacing:0}
+.site .bar__cta .resume-download{flex-shrink:0;margin-left:.15rem}

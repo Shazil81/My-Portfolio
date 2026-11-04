@@ -89,3 +89,7 @@ npm run build
 ## LeetCode Overview
 
 The `/api/leetcode` route reads public LeetCode data on the server. It uses the LeetCode profile URL in `content/data/profile.json`; no API key or environment variable is required. Responses are cached for one hour. The overview stays inside the canvas and does not redirect visitors.
+
+## Typography and Appearance
+
+Poppins headings, Lato body text, Roboto labels, and Geomini initials are loaded through Next.js font optimization. Day mode uses stone, charcoal, and burgundy; night mode uses graphite and pale rose. A subtle animated dot field replaces the hero grid.

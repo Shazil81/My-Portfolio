@@ -4141,3 +4141,6 @@ body:has(.cmdk) #cursor {
 .lc-breakdown strong { font-size: 1.5rem; }
 .lc-breakdown span, .lc-note { font-size: .75rem; }
 .lc-breakdown progress { width: 100%; height: 7px; accent-color: var(--ink); }
+
+.hero__card h1,.card-content h2,.ttl{font-family:var(--font-poppins),sans-serif}
+.hero__avatar{font-family:var(--font-geomini),sans-serif}
