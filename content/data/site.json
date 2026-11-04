@@ -90,16 +90,7 @@
     "note": "Best explored on a desktop"
   },
   "footer": {
-    "note": "Thanks for scrolling all the way down :)",
-    "inspiredLead": "Inspired by",
-    "inspiredShell": "yevtam.com",
-    "inspiredShellUrl": "https://yevtam.com",
-    "inspiredShellFor": "(dock, cursor)",
-    "inspiredJoin": "and",
-    "inspiredSurface": "ajvadlaseen.com",
-    "inspiredSurfaceUrl": "https://ajvadlaseen.com",
-    "inspiredSurfaceFor": "(type, borders, shadows)",
-    "inspiredRest": ""
+    "note": "Thanks for scrolling all the way down :)"
   },
   "desk": {
     "exit": "The site",

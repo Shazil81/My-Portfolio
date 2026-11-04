@@ -68,7 +68,7 @@ next.config.ts        Next.js configuration
 vercel.json           Next.js build settings for Vercel
 ```
 
-Some shared components and utilities are retained from the upstream codebase; the portfolio, project routes, and personalized canvas are exposed by this application.
+The application exposes the portfolio, project pages, personalized canvas, and LeetCode statistics route. Unused editor, archive, game, and visitor modules have been removed.
 
 ## Content
 
