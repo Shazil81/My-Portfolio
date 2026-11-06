@@ -29,6 +29,10 @@
       {
         "name": "Bootstrap",
         "logo": "/logos/bootstrap-original.svg"
+      },
+      {
+        "name": "Tailwind CSS",
+        "logo": "/logos/tailwindcss-original.svg"
       }
     ]
   },
@@ -67,6 +71,10 @@
       {
         "name": "Redis",
         "logo": "/logos/redis-original.svg"
+      },
+      {
+        "name": "MongoDB",
+        "logo": "/logos/mongodb-original.svg"
       }
     ]
   },
@@ -92,6 +100,10 @@
       {
         "name": "Vite",
         "logo": "/logos/vite.svg"
+      },
+      {
+        "name": "Postman",
+        "logo": "/logos/postman-original.svg"
       }
     ]
   },
