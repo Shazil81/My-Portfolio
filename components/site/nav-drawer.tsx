@@ -44,7 +44,18 @@ export function NavDrawer() {
     document.documentElement.toggleAttribute('data-drawer', open)
     if (!open) return
 
+    const page = document.querySelector('main')
+    const wasInert = page?.inert ?? false
+    if (page) page.inert = true
     const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Tab') {
+        const links = panel.current?.querySelectorAll<HTMLAnchorElement>('a')
+        if (links?.length) {
+          const first = links[0], last = links[links.length - 1]
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus() }
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus() }
+        }
+      }
       if (e.key === 'Escape') {
         setOpen(false)
         button.current?.focus()
@@ -55,6 +66,8 @@ export function NavDrawer() {
     panel.current?.querySelector<HTMLAnchorElement>('a')?.focus()
 
     return () => {
+      if (page) page.inert = wasInert
+      button.current?.focus()
       document.removeEventListener('keydown', onKey)
       document.documentElement.removeAttribute('data-drawer')
     }

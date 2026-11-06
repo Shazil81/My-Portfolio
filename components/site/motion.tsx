@@ -81,6 +81,7 @@ export function SiteMotion({ children }: { children: ReactNode }) {
         const target = document.querySelector<HTMLElement>(a.getAttribute('href')!)
         if (!target || !lenis) return
         e.preventDefault()
+        history.pushState(null, '', a.getAttribute('href')!)
         /*
          * Land the section's *content* just under the bar, not its box.
          *
@@ -161,6 +162,12 @@ export function SiteMotion({ children }: { children: ReactNode }) {
           const glow = root.current?.querySelector<HTMLElement>('[data-hero-glow]')
 
           const tick = () => {
+            const bounds = hero.getBoundingClientRect()
+            if (document.hidden || bounds.bottom < 0 || bounds.top > window.innerHeight) {
+              last = performance.now()
+              frame = requestAnimationFrame(tick)
+              return
+            }
             smooth.x += (target.x - smooth.x) * 0.11
             smooth.y += (target.y - smooth.y) * 0.11
             light.style.setProperty('--sx', `${smooth.x.toFixed(1)}px`)

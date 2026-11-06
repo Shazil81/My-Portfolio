@@ -15,6 +15,7 @@ export function Cursor() {
     const el = dot.current
     if (!el) return
     if (!matchMedia('(hover: hover) and (pointer: fine)').matches) return
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches
 
     let cx = window.innerWidth / 2
     let cy = window.innerHeight / 2
@@ -26,6 +27,7 @@ export function Cursor() {
       tx = e.clientX
       ty = e.clientY
       el.classList.add('on')
+      if (reduced) el.style.transform = `translate(${tx}px,${ty}px) translate(-50%,-50%)`
       const t = e.target as HTMLElement
       // form controls get the small dot too: the 22px ring hides the caret you're aiming at
     const precise = t.closest('.card__x,.tool,.chip,.link,a,input,textarea')
@@ -45,7 +47,7 @@ export function Cursor() {
       el.style.transform = `translate(${cx}px,${cy}px) translate(-50%,-50%)`
       raf = requestAnimationFrame(frame)
     }
-    raf = requestAnimationFrame(frame)
+    if (!reduced) raf = requestAnimationFrame(frame)
 
     return () => {
       window.removeEventListener('pointermove', move)

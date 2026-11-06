@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Geomini, Lato, Poppins, Roboto } from 'next/font/google'
+import { Lato, Poppins } from 'next/font/google'
 
 import { profile } from '@/content'
 import { DEFAULT_THEME, themeCss } from '@/content/themes'
@@ -10,10 +10,8 @@ import { SITE_URL } from '@/lib/site'
 import './globals.css'
 import './desktop.css'
 
-const geomini = Geomini({ subsets: ['latin'], variable: '--font-geomini', display: 'swap' })
 const lato = Lato({ subsets: ['latin'], weight: ['400', '700'], style: ['normal', 'italic'], variable: '--font-lato', display: 'swap' })
 const poppins = Poppins({ subsets: ['latin'], weight: ['500', '600', '700'], variable: '--font-poppins', display: 'swap' })
-const roboto = Roboto({ subsets: ['latin'], variable: '--font-roboto', display: 'swap' })
 
 export const viewport = {
   width: 'device-width',
@@ -48,7 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="en"
       data-theme={DEFAULT_THEME}
-      className={`${geomini.variable} ${lato.variable} ${poppins.variable} ${roboto.variable}`}
+      className={`${lato.variable} ${poppins.variable}`}
       suppressHydrationWarning
     >
       <head>
