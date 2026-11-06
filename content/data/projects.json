@@ -38,9 +38,48 @@
     ]
   },
   {
+    "slug": "railwise",
+    "name": "Railwise",
+    "tagline": "Thoughtful journeys. Reliable bookings.",
+    "year": 2026,
+    "kind": "System",
+    "lede": "A **railway booking application** with **segment-aware seat allocation**, **verified payments**, and **recoverable cancellations and refunds**.",
+    "highlights": [
+      "**PostgreSQL transaction locks and exclusion constraints** prevent overlapping seat reservations; group bookings allocate atomically.",
+      "**Ten-minute seat holds**, **signed Razorpay webhooks**, and payment reconciliation recover interrupted test checkouts.",
+      "**Celery and Redis** handle hold expiry, refund reconciliation, and email delivery; hosted background jobs run through a PC-hosted Docker worker.",
+      "**Live inventory updates over SSE**, server-calculated fares, and **PDF tickets**. Timetables and inventory are simulated; tickets are not valid for travel."
+    ],
+    "stack": [
+      "React",
+      "TypeScript",
+      "Django REST Framework",
+      "PostgreSQL",
+      "Redis",
+      "Celery",
+      "Razorpay"
+    ],
+    "links": [
+      {
+        "label": "Live Demo",
+        "href": "https://railwise-phi.vercel.app/"
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com/Shazil81/Railwise"
+      }
+    ],
+    "images": [
+      "/work/railwise-home.jpg",
+      "/work/railwise-train-results.jpg",
+      "/work/railwise-passenger-details.jpg",
+      "/work/railwise-booking-confirmation.jpg"
+    ]
+  },
+  {
     "slug": "flashsale",
     "name": "FlashSale",
-    "tagline": "Shopping, payments, and delivery — connected.",
+    "tagline": "Shopping, payments, and delivery \u2014 connected.",
     "year": 2026,
     "kind": "Product",
     "lede": "A **full-stack ecommerce application** with **customer, administrator, and delivery-partner workflows**.",

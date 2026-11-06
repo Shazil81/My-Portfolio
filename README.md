@@ -25,9 +25,9 @@ This is a Next.js project. It replaces the earlier Vite implementation. The fron
 - Animated introduction, grid background, and accessible navigation.
 - Saved light/dark theme and reduced-motion handling.
 - About, skills, experience, education, and contact sections.
-- SprintLens first, followed by FlashSale.
+- SprintLens first, Railwise second, followed by FlashSale.
 - Separate project pages with bold feature highlights, simple technology tags, and live/source links.
-- Screenshot galleries: three SprintLens images and two FlashSale images, cropped to the application UI.
+- Screenshot galleries: three SprintLens images, four Railwise images, and two FlashSale images, cropped to the application UI.
 - Resume download and professional profile links.
 - Interactive `/canvas` workspace with draggable cards, themes, and a personalized Live folder.
 - In-canvas LeetCode overview: total solved, Easy/Medium/Hard breakdown, and global ranking for Shazil81. Public statistics refresh hourly; unavailable data shows a retry state.
