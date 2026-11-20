@@ -71,10 +71,6 @@
       {
         "name": "Redis",
         "logo": "/logos/redis-original.svg"
-      },
-      {
-        "name": "MongoDB",
-        "logo": "/logos/mongodb-original.svg"
       }
     ]
   },
